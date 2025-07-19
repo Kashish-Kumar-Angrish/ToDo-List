@@ -38,7 +38,7 @@
     z-index: 0;
     background-color: transparent;
     color: #FFff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 button {
@@ -122,8 +122,9 @@ ul li span:hover {
         margin-top: 70px;
     }
 
-    span {
-        padding-right: 500px;
+    ul li span {
+        position: absolute;
+        left: 200px;
     }
 
     #list-container li {
