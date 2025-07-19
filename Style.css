@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#3A1C71, #D76D77, #FFAF7B);
+    color: #ffff;
+    padding: 50px;
+}
+
+.todolist {
+    border: 1px solid #ffff;
+    padding: 50px;
+    max-width: 540px;
+    padding: 40px 30px 70px;
+}
+
+#copy-pen {
+    height: 20px;
+}
+
+.inp-btn {
+    display: flex;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+
+#inputfield {
+    flex: 1;
+    height: 3rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 20px;
+    z-index: 0;
+    background-color: transparent;
+    color: #FFff;
+    font-size: 1.2rem;
+}
+
+button {
+    border-radius: 20px;
+    width: 80px;
+    height: 3rem;
+    position: absolute;
+    margin-left: 395px;
+    background-color: blue;
+    color: wheat;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    top: 12px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(accept.png);
+}
+
+ul li span {
+    position: absolute;
+    left: 420px;
+    top: 10px;
+    right: 0;
+    font-size: 22px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color: #555;
+}
+
+
+@media screen and (max-width: 620px) {
+
+    .todolist {
+        height: 540px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inp-btn {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        position: absolute;
+        left: -220px;
+        top: 190px;
+    }
+
+    #list-container {
+        margin-top: 70px;
+    }
+
+    span {
+        padding-right: 500px;
+    }
+
+    #list-container li {
+        font-size: 1.2rem;
+    }
+}
