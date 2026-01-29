@@ -1,7 +1,7 @@
 const INPUTFIELD = document.getElementById("inputfield");
 const LISTCONTAINER = document.getElementById("list-container");
-
 const btn = document.getElementById("add");
+
 
 btn.addEventListener("click", function(){
     if(INPUTFIELD.value === ""){
@@ -10,7 +10,7 @@ btn.addEventListener("click", function(){
         let task = document.createElement("li");
         task.innerHTML = INPUTFIELD.value;
         LISTCONTAINER.appendChild(task);
-
+        
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         task.appendChild(span);
@@ -21,13 +21,21 @@ btn.addEventListener("click", function(){
 
 );
 
-LISTCONTAINER.addEventListener("click", function(event){
-    if(event.target.tagname === "li"){
-        event.target.classlist.toggle("checked");
-    }else if(event.target.tagname === "span"){
-        event.target.parentelement.remove();
+/*LISTCONTAINER.addEventListener("click", function(e){
+    if(e.target.tagName === "li"){
+        e.target.classlist.toggle("Checked");
+        console.log("object")
     }
-}, false);
-
-let cla = document.getElementById("inpdiv");
-console.log(cla.classlist);
+    else if(e.target.tagName === "span"){
+        e.target.parentelement.remove();
+        console.log("object")
+    }
+}, false);*/
+LISTCONTAINER.addEventListener("click",(e)=>{
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("Checked")
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+    }
+})

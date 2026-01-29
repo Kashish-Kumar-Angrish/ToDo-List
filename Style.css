@@ -17,6 +17,7 @@
     padding: 50px;
     max-width: 540px;
     padding: 40px 30px 70px;
+    max-height: fit-content;
 }
 
 #copy-pen {
@@ -73,12 +74,12 @@ ul li::before {
     top: 12px;
 }
 
-ul li.checked {
+ul li.Checked {
     color: #555;
     text-decoration: line-through;
 }
 
-ul li.checked::before {
+ul li.Checked::before {
     background-image: url(imgs/accept.png);
 }
 
